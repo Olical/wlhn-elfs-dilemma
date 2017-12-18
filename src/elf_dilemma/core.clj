@@ -22,6 +22,4 @@
 
   (ws/close @socket))
 
-{:socket @socket
- :last-msg @last-msg
- :name (:name @last-msg)}
+(select-keys @last-msg #{:name :score})
